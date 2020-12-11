@@ -39,6 +39,29 @@
 
 /* Responsive latout */
 
+@media screen and (max-width:1200px){
+    .card {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .card {
+        width: 57%;
+        transition: none;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+}
+
+@media screen and (max-width:775px){
+    .card {
+        width: 85%;
+    }
+}
+
 @media screen and (max-width:600px){
     .team-area {
         flex-direction: column;
@@ -46,5 +69,6 @@
 
     .card {
         margin: 0px 20px 30px 20px;
+        width: 89%;
     }
 }
