@@ -9,6 +9,7 @@ Need to pull a quick summary for all your team members? This application generat
 * [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
+* [Screenshot](#screenshot)
 * [Questions](#questions)
 
 ## License
@@ -24,6 +25,10 @@ Ianaac27
 ## Tests
 
 [![README Walkthrough](assets/Walkthrough_screenshot.PNG)](https://drive.google.com/file/d/1RBXLx5R22cEjfbSk_yH26QOU5PRhq_6T/view)
+
+## Screenshot
+
+[![README Walkthrough](assets/Walkthrough_screenshot.PNG)]
 
 ## Questions
 
