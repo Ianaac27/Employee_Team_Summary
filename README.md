@@ -28,7 +28,7 @@ Ianaac27
 
 ## Screenshot
 
-[![README Walkthrough](assets/Walkthrough_screenshot.PNG)]
+![Employee Team Summary](output/assets/screenshot.png)
 
 ## Questions
 
