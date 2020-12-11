@@ -22,6 +22,8 @@ MIT
 
 Ianaac27
 
+Trilogy Education Services
+
 ## Tests
 
 [![Employee Team Summary Walkthrough](output/assets/walkthrough.PNG)](https://drive.google.com/file/d/1SZ1SxMxBqum1wyx8Ey3jFJGesAiTLqfe/view)
