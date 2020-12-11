@@ -24,7 +24,7 @@ Ianaac27
 
 ## Tests
 
-[![Employee Team Summary](assets/Walkthrough_screenshot.PNG)](https://drive.google.com/file/d/1SZ1SxMxBqum1wyx8Ey3jFJGesAiTLqfe/view)
+[![Employee Team Summary Walkthrough](output/assets/walkthrough.PNG)](https://drive.google.com/file/d/1SZ1SxMxBqum1wyx8Ey3jFJGesAiTLqfe/view)
 
 ## Screenshot
 
