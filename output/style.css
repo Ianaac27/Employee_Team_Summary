@@ -12,3 +12,16 @@
     display: flex;
     justify-content: center;
 }
+
+
+/* Responsive latout */
+@media screen and (max-width:600px){
+    .team-area {
+        flex-direction: column;
+    }
+
+    .card {
+        margin: 0px 20px 10px 20px;
+    }
+    
+}
