@@ -1,6 +1,6 @@
 const Manager = require("./lib/Manager");
-// const Engineer = require("./lib/Engineer");
-// const Intern = require("./lib/Intern");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
@@ -10,10 +10,12 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 const Choice = require("inquirer/lib/objects/choice");
+const Employee = require("./lib/Employee");
 
 const employeeList = [];
 
-function askUserForManagerInfro() {
+// Asking user for manager info
+function managerInfo() {
 
     return inquirer.prompt([
         {
@@ -37,71 +39,106 @@ function askUserForManagerInfro() {
             type: "input"
         }
     ]).then(( managerData ) => {
-
         const newManger = new Manager( managerData.name, managerData.id, managerData.email, managerData.officeNumber );
-        
+
         employeeList.push( newManger );
 
-        createHTMLFIle();
-
-        // askUserForEmployeeType();
+        console.log("Manager Created");
+        employeeType();
 
     });
 }
 
+// Asking user if they want to add an employee
+function employeeType() {
+    return inquirer.prompt([
+        {
+            message: "Which type of team member would you like to add next?",
+            name: "Employee",
+            type: "list",
+            choices: ["Engineer", "Intern", "I do not wish to any more team members"]
+        }
 
-//console log line breaks or colors to show different set of prompts.
+    ]).then(( employeeData ) => {
+        if( employeeData.Employee == "Engineer") {
+            engineerInfo();
+        } 
+        else if (employeeData.Employee == "Intern") {
+            internInfo();
+        }
+        else {
+            createHTMLFIle();
+        }
+    });
+}
 
-// function askUserForEmployeeType() {
-//     return inquirer.prompt([
-//         {
-//             message: "Name",
-//             name: "name",
-//             type: "list"
-           
-//         }
-//     ]).then(( employeeData ) => {
+//Asking user for engineer info
+function engineerInfo() {
+    return inquirer.prompt([
+        {
+            message: "What is your engineer's name?",
+            name: "name",
+            type: "input"
+        },
+        {
+            message: "What is your engineer's id?",
+            name: "id",
+            type: "input"
+        },
+        {
+            message: "What is your engineer's email?",
+            name: "email",
+            type: "input"
+        },
+        {
+            message: "What is your engineer's GitHub username?",
+            name: "github",
+            type: "input"
+        }
+    ]).then(( engineerData ) => {
+        const newEngineer = new Engineer( engineerData.name, engineerData.id, engineerData.email, engineerData.github );
+        
+        employeeList.push( newEngineer );
 
-//         //If they selected a new Engineer
-//         askUserForEngineerInfo(); 
+        console.log("Engineer Created");
+        employeeType();
+    });
+}
 
-//         //ELSE if the user selected a new intern
-//         askUserForInternInfo();
+//Asking user for intern info
+function internInfo() {
+    return inquirer.prompt([
+        {
+            message: "What is your intern's name?",
+            name: "name",
+            type: "input"
+        },
+        {
+            message: "What is your intern's id?",
+            name: "id",
+            type: "input"
+        },
+        {
+            message: "What is your intern's email?",
+            name: "email",
+            type: "input"
+        },
+        {
+            message: "What school did your intern go to?",
+            name: "school",
+            type: "input"
+        }
+    ]).then(( internData ) => {
+        const newIntern = new Intern( internData.name, internData.id, internData.email, internData.school );
+        
+        employeeList.push( newIntern );
 
-//         //ELSE create Output
+        console.log("Intern Created");
+        employeeType();
+    });
+}
 
-//         createHTMLFIle();
-
-//     });
-// }
-
-// function askUserForEngineerInfo() {
-//     return inquirer.prompt([
-//         {
-//             message: "Name",
-//             name: "name",
-//             type: "input"
-//         }
-//     ]).then(( engineerData ) => {
-
-//     });
-// }
-
-// function askUserForInternInfo() {
-//     return inquirer.prompt([
-//         {
-//             message: "Name",
-//             name: "name",
-//             type: "input"
-//         }
-//     ]).then(( internData ) => {
-
-//     });
-// }
-
-
-const fileNumber = 1;
-
+//Create team.html file and send to output folder
 function createHTMLFIle() {
     const htmlContent = render( employeeList );
 
@@ -109,8 +146,7 @@ function createHTMLFIle() {
         if (err) console.log("Failed to write file");
         else console.log("Wrote file.");
     })
-
-
 }
 
-askUserForManagerInfro();
+//Initiate application
+managerInfo();
