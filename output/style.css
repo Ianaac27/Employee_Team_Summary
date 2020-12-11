@@ -17,6 +17,16 @@
     justify-content: center;
 }
 
+.email-link, .github-link {
+    text-decoration: none;
+    color: black;
+}
+
+.email-link:hover, .github-link:hover {
+    text-decoration: none;
+    color: #6e879e;
+    opacity: .5;
+}
 
 /* Responsive latout */
 @media screen and (max-width:600px){
