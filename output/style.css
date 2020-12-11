@@ -10,6 +10,13 @@
 .card {
     margin: 0 20px 0 20px;
     box-shadow: 7px 10px 20px black;
+    transition:
+        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        opacity 250ms linear;
+}
+
+.card:hover {
+    transform: scale(1.1);
 }
 
 .team-area {
@@ -35,7 +42,7 @@
     }
 
     .card {
-        margin: 0px 20px 10px 20px;
+        margin: 0px 20px 30px 20px;
     }
     
 }
