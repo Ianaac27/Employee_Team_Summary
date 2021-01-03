@@ -2,7 +2,7 @@
 
 ## Description
 
-Need to pull a quick summary for all your team members? This application generates a responsive HTML page that displays all of the team members on your development team along with their roles and contact information. This is processed through npm "Inquirer" in which gives the user a set of prompts that helps provide information for all members of the team. This project demonstrates my skillset in JavaScript, Node.JS, npm "Inquirer", as well as unit testing through Jest. I have also utluized some of my CSS skills to bring more style and responsivness to the generated page. 
+Need to pull a quick summary for all your team members? This application generates a responsive HTML page that displays all of the team members on your development team along with their roles and contact information. This is processed through npm "Inquirer" in which gives the user a set of prompts that helps provide information for all members of the team. This project demonstrates my skillset in JavaScript, Node.JS, npm "Inquirer", as well as unit testing through Jest. I have also utilized some of my CSS skills to bring more style and responsiveness to the generated page. 
 
 ## Table of Contents
 
